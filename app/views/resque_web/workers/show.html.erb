@@ -20,7 +20,7 @@
         <% end %>
       </td>
       <td class="process">
-        <% data = worker.processing || {} %>
+        <% data = worker.worker_registry.job || {} %>
         <% if data['queue'] %>
           <code><%= data['payload']['class'] %></code>
           <small><%= data['run_at'] %></small>

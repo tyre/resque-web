@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gemspec
 gem 'rails', '4.0.0'
-gem 'resque', :git => 'https://github.com/resque/resque.git', :branch => "1-x-stable"
+gem 'resque', :git => 'https://github.com/resque/resque.git', :branch => "master"
 
 gem 'sqlite3', :platforms => :ruby
 gem 'activerecord-jdbcsqlite3-adapter', :platforms => :jruby

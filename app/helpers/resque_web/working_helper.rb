@@ -1,11 +1,11 @@
 module ResqueWeb
   module WorkingHelper
     def workers
-      @workers ||= Resque.workers
+      @workers ||= Resque::WorkerRegistry.all
     end
 
     def jobs
-      @jobs ||= workers.map(&:job)
+      @jobs ||= workers.map { |worker| worker.worker_registry.job  }
     end
 
     def worker_jobs
